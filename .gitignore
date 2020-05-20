@@ -76,13 +76,7 @@ config/environment_variables.yml
 yarn-debug.log*
 .yarn-integrity
 
+image.sh
+
 # production
 /build
-
-
-
-
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
