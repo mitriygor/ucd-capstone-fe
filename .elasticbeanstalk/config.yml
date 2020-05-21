@@ -1,9 +1,9 @@
 branch-defaults:
   master:
-    environment: ucd-capstone-fe-v4
+    environment: ucd-capstone-fe-v5
     group_suffix: null
 global:
-  application_name: ucd-capstone-fe-v4
+  application_name: ucd-capstone-fe-v5
   branch: null
   default_ec2_keyname: MyPrivateKey
   default_platform: Docker 18.09.9-ce
