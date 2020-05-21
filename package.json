@@ -32,7 +32,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "create:aws": "chmod +x ./bin/deploy.sh; ./bin/deploy.sh create",
+    "deploy:aws": "chmod +x ./bin/deploy.sh; ./bin/deploy.sh deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
