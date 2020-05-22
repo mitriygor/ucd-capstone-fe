@@ -33,14 +33,10 @@ export const makeAuthRouting = () => {
     <Router history={history}>
       <div>
         <Route
-          path="/callback"
           render={props => {
-            handleAuthentication(props);
-            return <Callback />
-          }}
-        />
-        <Route
-          render={props => {
+              if (/access_token|id_token|error/.test(window.location.hash)) {
+                  handleAuthentication(props);
+              }
             return <App auth={auth} {...props} />
           }}
         />
