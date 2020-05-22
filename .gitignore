@@ -76,7 +76,6 @@ config/environment_variables.yml
 yarn-debug.log*
 .yarn-integrity
 
-image.sh
 # production
 /build
 
