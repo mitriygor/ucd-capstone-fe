@@ -77,7 +77,6 @@ yarn-debug.log*
 .yarn-integrity
 
 image.sh
-deploy.sh
 # production
 /build
 
