@@ -16,13 +16,13 @@ export interface AppProps {
 }
 
 export interface AppState {}
-console.log();
+console.log(" ");
 console.log("App");
 
 class App extends Component<AppProps, AppState> {
 
   constructor(props: AppProps) {
-      console.log();
+      console.log(" ");
       console.log("App: constructor()");
     super(props);
 
@@ -31,19 +31,19 @@ class App extends Component<AppProps, AppState> {
   }
 
   handleLogin() {
-      console.log();
+      console.log(" ");
       console.log("App: handleLogin()");
     this.props.auth.login()
   }
 
   handleLogout() {
-      console.log();
+      console.log(" ");
       console.log("App: handleLogout()");
     this.props.auth.logout()
   }
 
   render() {
-      console.log();
+      console.log(" ");
       console.log("App: render()");
     return (
         <div>
@@ -66,7 +66,7 @@ class App extends Component<AppProps, AppState> {
   }
 
   generateMenu() {
-      console.log();
+      console.log(" ");
       console.log("App: generateMenu()");
     return (
         <Menu>
@@ -80,7 +80,7 @@ class App extends Component<AppProps, AppState> {
   }
 
   logInLogOutButton() {
-      console.log();
+      console.log(" ");
       console.log("App: logInLogOutButton()");
     if (!!this.props && !!this.props.auth && this.props.auth.isAuthenticated()) {
         console.log("App: authenticated");
@@ -100,7 +100,7 @@ class App extends Component<AppProps, AppState> {
   }
 
   generateCurrentPage() {
-      console.log();
+      console.log(" ");
       console.log("App: generateCurrentPage()");
     if (!this.props || !this.props.auth || !this.props.auth.isAuthenticated()) {
         console.log("App: generateCurrentPage(): not authenticated");

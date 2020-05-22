@@ -8,20 +8,20 @@ interface LogInProps {
 
 interface LogInState {}
 
-console.log();
+console.log(" ");
 console.log("LogIn");
 
 export class LogIn extends React.PureComponent<LogInProps, LogInState> {
 
 
   onLogin = () => {
-    console.log();
+    console.log(" ");
     console.log("LogIn: onLogin()");
     this.props.auth.login()
   };
 
   render() {
-    console.log();
+    console.log(" ");
     console.log("LogIn: render()");
     return (
       <div>

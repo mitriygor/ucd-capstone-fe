@@ -31,13 +31,13 @@ export default class Auth {
     }
 
     login() {
-        console.log();
+        console.log(" ");
         console.log("Auth: login()");
         this.auth0.authorize();
     }
 
     handleAuthentication() {
-        console.log();
+        console.log(" ");
         console.log('Auth: handleAuthentication()');
         this.auth0.parseHash((err, authResult) => {
             console.log('Auth: handleAuthentication(): parseHash()');
@@ -57,21 +57,21 @@ export default class Auth {
     }
 
     getAccessToken() {
-        console.log();
+        console.log(" ");
         console.log('Auth: getAccessToken()');
         console.log('Auth: getAccessToken(): accessToken', this.accessToken);
         return this.accessToken;
     }
 
     getIdToken() {
-        console.log();
+        console.log(" ");
         console.log('Auth: getIdToken()');
         console.log('Auth: getIdToken(): idToken', this.idToken);
         return this.idToken;
     }
 
     setSession(authResult) {
-        console.log();
+        console.log(" ");
         console.log('Auth: setSession()');
         // Set isLoggedIn flag in localStorage
         localStorage.setItem('isLoggedIn', 'true');
@@ -91,10 +91,10 @@ export default class Auth {
     }
 
     renewSession() {
-        console.log();
+        console.log(" ");
         console.log('Auth: renewSession()');
         this.auth0.checkSession({}, (err, authResult) => {
-            console.log();
+            console.log(" ");
             console.log('Auth: renewSession(): checkSession()');
             if (authResult && authResult.accessToken && authResult.idToken) {
                 console.log('Auth: renewSession(): checkSession(): is auth');
@@ -116,7 +116,7 @@ export default class Auth {
 
         // Remove isLoggedIn flag from localStorage
         localStorage.removeItem('isLoggedIn');
-        console.log();
+        console.log(" ");
         console.log('Auth.logout()');
         this.auth0.logout({
             return_to: window.location.origin
@@ -128,7 +128,7 @@ export default class Auth {
     }
 
     isAuthenticated() {
-        console.log();
+        console.log(" ");
         console.log('Auth: isAuthenticated()');
         // Check whether the current time is past the
         // access token's expiry time
