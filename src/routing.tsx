@@ -35,7 +35,7 @@ export const makeAuthRouting = () => {
         <Route
           render={props => {
               if (/access_token|id_token|error/.test(window.location.hash)) {
-                  handleAuthentication(props);
+                  auth.handleAuthentication();
               }
             return <App auth={auth} {...props} />
           }}
