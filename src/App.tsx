@@ -16,9 +16,14 @@ export interface AppProps {
 }
 
 export interface AppState {}
+console.log();
+console.log("App");
 
 class App extends Component<AppProps, AppState> {
+
   constructor(props: AppProps) {
+      console.log();
+      console.log("App: constructor()");
     super(props);
 
     this.handleLogin = this.handleLogin.bind(this);
@@ -26,14 +31,20 @@ class App extends Component<AppProps, AppState> {
   }
 
   handleLogin() {
+      console.log();
+      console.log("App: handleLogin()");
     this.props.auth.login()
   }
 
   handleLogout() {
+      console.log();
+      console.log("App: handleLogout()");
     this.props.auth.logout()
   }
 
   render() {
+      console.log();
+      console.log("App: render()");
     return (
         <div>
           <Segment style={{ padding: '8em 0em' }} vertical>
@@ -55,6 +66,8 @@ class App extends Component<AppProps, AppState> {
   }
 
   generateMenu() {
+      console.log();
+      console.log("App: generateMenu()");
     return (
         <Menu>
           <Menu.Item name="home">
@@ -67,13 +80,17 @@ class App extends Component<AppProps, AppState> {
   }
 
   logInLogOutButton() {
+      console.log();
+      console.log("App: logInLogOutButton()");
     if (!!this.props && !!this.props.auth && this.props.auth.isAuthenticated()) {
+        console.log("App: authenticated");
       return (
           <Menu.Item name="logout" onClick={this.handleLogout}>
             Log Out
           </Menu.Item>
       )
     } else {
+        console.log("App: logInLogOutButton(): not authenticated");
       return (
           <Menu.Item name="login" onClick={this.handleLogin}>
             Log In
@@ -83,8 +100,13 @@ class App extends Component<AppProps, AppState> {
   }
 
   generateCurrentPage() {
+      console.log();
+      console.log("App: generateCurrentPage()");
     if (!this.props || !this.props.auth || !this.props.auth.isAuthenticated()) {
+        console.log("App: generateCurrentPage(): not authenticated");
       return <LogIn auth={this.props.auth} />
+    } else {
+        console.log("App: generateCurrentPage(): authenticated");
     }
 
     return (
