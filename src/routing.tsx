@@ -25,7 +25,11 @@ const handleAuthentication = (props: any) => {
 
 export const makeAuthRouting = () => {
     console.log(" ");
-    console.log("makeAuthRouting");
+    console.log("makeAuthRouting()");
+    console.log("makeAuthRouting(): location", window.location);
+    console.log("makeAuthRouting(): history", history);
+    console.log("makeAuthRouting(): props", props);
+    console.log("makeAuthRouting(): auth", auth);
   return (
     <Router history={history}>
       <div>
